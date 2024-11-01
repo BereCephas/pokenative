@@ -1,5 +1,6 @@
 
 import {View,Text,StyleSheet,TextProps} from 'react-native';
+import { Colors } from '@/constants/Colors';
 
 const styles={
     body3:{
@@ -12,7 +13,7 @@ const styles={
         fontWeght:"bold",
     },
     caption:{
-        fontSize:24,
+        fontSize:14,
         lineHeight:32,
     },
     subtitle1:{
@@ -34,12 +35,12 @@ const styles={
 
 type Props= TextProps &{
     variant?: keyof typeof styles,
-    color?:string,
+    color?:keyof typeof Colors["light"] ,
 }
 
-export default function  ThemedText({variant,color,...rest}:Props){
+export default function  ThemedText({variant,color,style,...rest}:Props){
     return <View>
-        <Text style={styles[variant ?? "body3"]} {...rest}>
+        <Text style={[style,styles[variant ?? "body3"],{color: Colors.light[color ?? "grayDark"]}]} {...rest}>
 
         </Text>
     </View>
