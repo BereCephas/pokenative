@@ -1,6 +1,6 @@
 
 import { View,TextInput, Image,StyleSheet, ImageStyle } from "react-native";
-import {Row} from "@/components/Row";
+import Row from "@/components/Row";
 import useThemecolor from "@/hooks/useThemescolor";
 type Props={
     value:string,

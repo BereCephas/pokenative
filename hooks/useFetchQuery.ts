@@ -5,6 +5,7 @@ function wait(duration:number){
 }
 
 const endpoint="https://pokeapi.co/api/v2/";
+
 export function useFetchQuery(path:string){
     return useQuery({
         queryKey:[path],

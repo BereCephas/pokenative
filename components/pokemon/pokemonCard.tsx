@@ -12,7 +12,7 @@ type Props = {
 
 export default function PokemonCard({ style, name, id }: Props) {
     const colors= useThemecolor();
-    return <Link href={{pathname:"/pokemon/[id]",params:{id:"id"}}} asChild>
+    return <Link href={{pathname:"/pokemon/[id]",params:{id:id,name:name}}} asChild>
         <Pressable style={style}>
         <Card style={[styles.card]}>
             <View style={styles.id}>
